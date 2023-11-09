@@ -1,0 +1,32 @@
+import logging as L
+import os
+
+directory = 'TNR-71'
+parent_dir = "C:/Users/"+os.getlogin()+"/Desktop/"
+Directory = os.path.join(parent_dir, directory)
+#now we will Create and configure logger
+L.basicConfig(filename = Directory + "/logs.txt",
+              format = '%(asctime)s %(message)s',
+              filemode = 'a')
+
+#Let us Create an object
+logger = L.getLogger()
+
+#Now we are going to Set the threshold of logger to DEBUG
+logger.setLevel(L.INFO)
+
+
+
+#def distanceBetweenTuples(data1, data2):
+#    squaredSum = 0.0
+#    for i in range(len(data1)):
+#        squaredSum = squaredSum + (data1[i] - data2[i])**2
+#    return(squaredSum**0.5)
+#
+#Tuple1 = (1.2, 3.4, 3.2)
+#Tuple2 = (2.4, 2.2, 4.2)
+#
+#distanceBetweenTuples(Tuple1, Tuple2)
+
+#for i in range(7):
+#    print(i)
